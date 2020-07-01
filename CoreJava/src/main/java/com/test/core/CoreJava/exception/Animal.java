@@ -30,7 +30,7 @@ public class Animal {
 	
 	public static void main(String[] args) {
 		try {
-		Animal a = new Animal("Ajit", 25);
+		Animal a = new Animal("Cow", 25);
 		}catch(AgeAnimalException e) {
 			System.out.println(e.getMessage());
 		}

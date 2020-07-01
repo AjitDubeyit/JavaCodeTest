@@ -12,13 +12,9 @@ public class MovesCount {
 			int j = marias[i];
 				while(j>0 && l>0) {
 					int k=j%10;
-					//System.out.println(k);
 					j = j/10;
-					
 					int m = l%10;
-					//System.out.println(m);
 					l = l/10;
-					
 					movesCount = movesCount+(Math.abs(k-m));
 				}
 				System.out.println("moves cound " + movesCount);			

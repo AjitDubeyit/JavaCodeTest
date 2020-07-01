@@ -10,8 +10,7 @@ public final class Singleton implements Serializable{
 		/*
 		 * If we need to prevent to break singleton pattern by using reflection 
 		 *  we should throw runtime exception
-		 */
-		/*
+		 *  
 		 * if(instance!=null) { throw new RuntimeException(); }
 		 */
 	}
