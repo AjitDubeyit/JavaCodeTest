@@ -7,7 +7,6 @@ public class Test {
 	
 	public static void main(String[] args) {
 		
-		
 		Student s = new Student("ajit", 28);
 		Student s1 = new Student("alok", 30);
 		Student s2 = new Student("amit", 67);

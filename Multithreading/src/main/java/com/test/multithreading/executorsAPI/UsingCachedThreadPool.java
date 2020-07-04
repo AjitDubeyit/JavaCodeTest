@@ -19,7 +19,7 @@ public class UsingCachedThreadPool {
 		executorService.execute(new LoopTaskA());
 		
 		executorService.shutdown();
-		//executorService.execute(new LoopTaskA());//java.util.concurrent.RejectedExecutionException
+		executorService.execute(new LoopTaskA());//java.util.concurrent.RejectedExecutionException
 		System.out.println("main thread end here ....");
 		
 	}

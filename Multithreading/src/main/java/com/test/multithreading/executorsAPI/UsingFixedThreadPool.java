@@ -12,7 +12,8 @@ public class UsingFixedThreadPool {
 		ExecutorService executorService = Executors.newFixedThreadPool(6);
 		executorService.execute(new LoopTaskA()); 
 		executorService.execute(new LoopTaskA());
-		executorService.execute(new LoopTaskA());executorService.execute(new LoopTaskA()); 
+		executorService.execute(new LoopTaskA());
+		executorService.execute(new LoopTaskA()); 
 		executorService.execute(new LoopTaskA());
 		executorService.execute(new LoopTaskA());
 		
