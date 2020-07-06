@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Object_Sorting {
 	
@@ -21,9 +22,12 @@ public class Object_Sorting {
 		list.add(s2);
 		list.add(s3);
 		
-		Collections.sort(list,Comparator.comparing(Student::getAge).thenComparing(Student::getName));
-		
+		//Collections.sort(list,Comparator.comparing(Student::getAge).thenComparing(Student::getName));
+		Collections.sort(list,Comparator.comparing(Student::getName).reversed());
 		list.forEach(student->System.out.println(student.toString()));
+		
+		List<String> studentList = list.stream().map(x->x.getName()).collect(Collectors.toList());
+		//studentList.forEach(x -> System.out.println(x));
 		
 	}
 
