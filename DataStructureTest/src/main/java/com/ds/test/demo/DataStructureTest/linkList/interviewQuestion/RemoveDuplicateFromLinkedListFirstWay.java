@@ -18,7 +18,7 @@ public class RemoveDuplicateFromLinkedListFirstWay {
 	
 	private void removeDuplicateNodeFromLL(Node head) {
 		while(head!=null) {
-			Node curr = head;
+			Node curr = head;//get first node of linked list
 			while(curr.next!=null) {
 				if(curr.next.value==head.value) {
 					curr.next = curr.next.next;
@@ -35,8 +35,9 @@ public class RemoveDuplicateFromLinkedListFirstWay {
 		Node head = null;
 		head = ll.addNodeInLinkedList(head, 10);
 		head = ll.addNodeInLinkedList(head, 20);
+		head = ll.addNodeInLinkedList(head, 40);
+		head = ll.addNodeInLinkedList(head, 50);
 		head = ll.addNodeInLinkedList(head, 10);
-		head = ll.addNodeInLinkedList(head, 30);
 		
 		ll.removeDuplicateNodeFromLL(head);
 		

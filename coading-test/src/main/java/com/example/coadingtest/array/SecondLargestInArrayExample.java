@@ -6,20 +6,18 @@ public class SecondLargestInArrayExample {
 	public static void main(String[] args) {
 		SecondLargestInArrayExample secondMain = new SecondLargestInArrayExample();
 		int arr[] = {40,10,60,5,30,50,70};
-		System.out.println("Second Largest number in array is: "+secondMain.getSecondLargest(arr));
-	}
-	
-	public static int getSecondLargest(int []a) {
-		int temp;
-		for(int i=0; i<a.length;i++) {
-			for(int j = i+1; j<a.length; j++) {
-				if(a[i]>a[j]) {
-					temp = a[i];
-					a[i] = a[j];
-					a[j] = temp;
-				}
+		int largest = arr[0];
+		int secondLargest = arr[0];
+		
+		for(int i = 0; i< arr.length; i++) {
+			if(arr[i]>largest) {
+				secondLargest = largest;
+				largest = arr[i];
+			} else if(arr[i]>secondLargest) {
+				secondLargest = arr[i];
 			}
 		}
-		return a[a.length-2];
+		
+		System.out.println("Second Largest number in array is: " + secondLargest);
 	}
 }
