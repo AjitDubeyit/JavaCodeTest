@@ -17,9 +17,9 @@ public class PalindromeLinkList {
 		return head;
 	}
 	
-	private boolean palindromeCheck(Node list) {
-		Node curr = list;
-		Node runner = list;
+	private boolean palindromeCheck(Node head) {
+		Node curr = head;
+		Node runner = head;
 		Stack<Integer> stack = new Stack<>();
 		
 		while(runner!=null && runner.next!=null) {
@@ -46,10 +46,10 @@ public class PalindromeLinkList {
 		Node head = null;
 		head = palindromeLinkList.pushIntoLinkedList(head, 10);
 		head = palindromeLinkList.pushIntoLinkedList(head, 20);
+		head = palindromeLinkList.pushIntoLinkedList(head, 30);
 		head = palindromeLinkList.pushIntoLinkedList(head, 10);
-		head = palindromeLinkList.pushIntoLinkedList(head, 10);
-		head = palindromeLinkList.pushIntoLinkedList(head, 20);
-		head = palindromeLinkList.pushIntoLinkedList(head, 10);
+		//head = palindromeLinkList.pushIntoLinkedList(head, 20);
+		//head = palindromeLinkList.pushIntoLinkedList(head, 10);
 		
 		System.out.println("isPalindrome: "+palindromeLinkList.palindromeCheck(head));
 		

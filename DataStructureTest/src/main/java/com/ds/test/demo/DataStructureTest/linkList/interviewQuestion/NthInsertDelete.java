@@ -23,7 +23,7 @@ public class NthInsertDelete {
 		Node newNode = new Node();
 		newNode.data = value;
 		
-		for(int i=0; i<n; i++) {
+		for(int i=1; i<n; i++) {
 			if(curr==null) 
 				throw new NullPointerException();
 			curr = curr.next;
@@ -76,8 +76,10 @@ public class NthInsertDelete {
 			node = node.next;
 		}
 		
-		nthInsertDelete.deleteFromLastNth(1,head);
-		System.out.println("Link List after deleting!");
+		nthInsertDelete.nThInsert(17,4,head);
+		
+		//nthInsertDelete.deleteFromLastNth(1,head);
+		//System.out.println("Link List after deleting!");
 		
 		while(head!=null) {
 			System.out.println(head.data);

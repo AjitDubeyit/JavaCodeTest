@@ -35,7 +35,7 @@ public class RemoveDuplicateFromLinkedListFirstWay {
 		Node head = null;
 		head = ll.addNodeInLinkedList(head, 10);
 		head = ll.addNodeInLinkedList(head, 20);
-		head = ll.addNodeInLinkedList(head, 40);
+		//head = ll.addNodeInLinkedList(head, 40);
 		head = ll.addNodeInLinkedList(head, 50);
 		head = ll.addNodeInLinkedList(head, 10);
 		

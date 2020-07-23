@@ -16,10 +16,10 @@ public class SplitALinkList {
 		return head;
 	}
 	
-	private Node deviceLL(Node list) {
-		if(list==null) return null;
+	private Node deviceLL(Node head) {
+		if(head==null) return null;
 		
-		Node runner = list.next;
+		Node runner = head.next;
 		
 		while(runner!=null) {
 			runner = runner.next;
@@ -29,10 +29,10 @@ public class SplitALinkList {
 			} else {
 				runner = runner.next;
 			}
-			list = list.next;
+			head = head.next;
 		}
-		Node returnList = list.next;
-		list.next = null;
+		Node returnList = head.next;
+		head.next = null;
 		
 		return returnList;
 	}
