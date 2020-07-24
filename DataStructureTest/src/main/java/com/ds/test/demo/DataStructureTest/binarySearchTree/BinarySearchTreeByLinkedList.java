@@ -78,9 +78,47 @@ public class BinarySearchTreeByLinkedList {
 			}
 		}
 	}
-	
+
+	public boolean printAncestorOfNode(Node root, int value) {
+		if(root==null) {
+			return false;
+		}
+
+		if(root.value == value) {
+			return true;
+		}
+
+		boolean left = printAncestorOfNode(root.left, value);
+
+		boolean right = false;
+
+		if(!left) {
+			right = printAncestorOfNode(root.right, value);
+		}
+
+		if(left || right) {
+			System.out.print(root.value + " ");
+		}
+		return (left||right);
+	}
+
+	//print height of tree
+	public int printMaxHeightOfTree(Node root) {
+		if(root==null) {
+			return 0;
+		} else {
+			int leftHeight = printMaxHeightOfTree(root.left);
+			int rightHeight = printMaxHeightOfTree(root.right);
+
+			if(leftHeight>rightHeight){
+				return leftHeight+1;
+			} else {
+				return rightHeight+1;
+			}
+		}
+	}
 	public void deleteDeepestNode(Node root) {
-		
+
 	}
 
 	public static void main(String[] args) {
@@ -95,12 +133,18 @@ public class BinarySearchTreeByLinkedList {
 		root = bst.insert(root,7);
 		root = bst.insert(root,3);
 
+		//Breath First Search (BFS)
 		//bst.levelOrderTraverse(root);
 
+		//Depth First Search (DFS)
 		//bst.inOrder(root);
 		//bst.preOrder(root);
-		bst.postOrder(root);
-		bst.searchNodeInBinaryTree(70, root);
+		//bst.postOrder(root);
+		//bst.searchNodeInBinaryTree(70, root);
+
+		//bst.printAncestorOfNode(root, 70);
+		int height = bst.printMaxHeightOfTree(root);
+		System.out.println("Height of tree: " + height);
 	}
 }
 

@@ -11,7 +11,7 @@ import com.test.multithreading.common.LoopTaskA;
 public class UsingCachedThreadPool {
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		System.out.println("main thread start here ....");
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		executorService.execute(new LoopTaskA()); 
@@ -23,7 +23,7 @@ public class UsingCachedThreadPool {
 		
 		
 		Future<ExecutorService> dfds = (Future<ExecutorService>) executorService.submit(new LoopTaskA());//java.util.concurrent.RejectedExecutionException
-		System.out.println("isDone: "+dfds.isDone() + " isCancelled(): " + dfds.isCancelled());
+		System.out.println("isDone: "+dfds.isDone() + " isCancelled(): " + dfds.isCancelled() + " get: "+dfds.get());
 	
 		executorService.shutdown();
 		System.out.println("isDone: "+dfds.isDone() + " isCancelled(): " + dfds.isCancelled());
