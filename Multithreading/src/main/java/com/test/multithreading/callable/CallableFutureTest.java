@@ -11,6 +11,7 @@ class CallableExample implements Callable {
 		Random random = new Random();
 		Integer randomNumber = random.nextInt(5);
 		Thread.sleep(randomNumber*100);
+		System.out.println("Generated number: "+randomNumber);
 		return randomNumber;
 	}
 }
