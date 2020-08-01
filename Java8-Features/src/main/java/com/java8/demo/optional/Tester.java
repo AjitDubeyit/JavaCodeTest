@@ -26,6 +26,9 @@ public class Tester {
 		Integer value1 = a.orElse(new Integer(0));
 		//Optional.get - gets the value, value should be present
 		Integer value2 = b.get();
+		
+		Integer value3 = b.orElse(0);
+		System.out.println("Value 3: " + value3);
 		return value1+value2;
 	}
 }
