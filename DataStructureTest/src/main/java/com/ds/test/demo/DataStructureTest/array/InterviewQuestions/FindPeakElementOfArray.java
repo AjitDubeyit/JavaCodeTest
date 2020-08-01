@@ -1,4 +1,4 @@
-package com.example.coadingtest.array;
+package com.ds.test.demo.DataStructureTest.array.InterviewQuestions;
 
 
 /*
