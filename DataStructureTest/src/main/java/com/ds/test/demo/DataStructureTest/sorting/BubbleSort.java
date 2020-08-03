@@ -4,9 +4,9 @@ package com.ds.test.demo.DataStructureTest.sorting;
 public class BubbleSort {
 	
 	public void sort(int arr[]) {
-		int n = arr.length;
-		for(int i=0; i<n; i++) {
-			for(int j=0; j<n-i-1; j++) {
+		
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr.length-i-1; j++) {
 				if(arr[j]>arr[j+1]) {
 					int temp = arr[j];
 					arr[j] = arr[j+1];
