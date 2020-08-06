@@ -9,5 +9,4 @@ public class MultithreadingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MultithreadingApplication.class, args);
 	}
-
 }
