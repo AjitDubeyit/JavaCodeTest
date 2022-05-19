@@ -6,7 +6,7 @@ package com.ds.test.demo.DataStructureTest.linkList.interviewQuestion;
  * Author: Ajit Dubey
  */
 public class MidOfLinkedList {
-	
+
 	public static Node2 createLinkedList(Node2 head, int value) {
 		Node2 newNode = new Node2();
 		newNode.value = value;
@@ -14,25 +14,28 @@ public class MidOfLinkedList {
 		head = newNode;
 		return head;
 	}
-	
+
 	public static void findMidOfLinkedList(Node2 head) {
-		if(head == null) return;
-		Node2 runner = head;
-		head = head.next;
-		
-		while(head!= null) {
+		if(head == null) { 
+			return;
+		} else {
+			Node2 runner = head;
 			head = head.next;
-			if(head!=null) {
+
+			while(head!= null) {
 				head = head.next;
-				runner = runner.next;
+				if(head!=null) {
+					head = head.next;
+					runner = runner.next;
+				}
+
 			}
-			
+			System.out.println("Mid of Linked list: " + runner.value);
 		}
-		System.out.println("Mid of Linked list: " + runner.value);
 	}
-	
-	
-	
+
+
+
 	public static void main(String[] args) {
 		Node2 head = null;
 		head  = MidOfLinkedList.createLinkedList(head, 10);

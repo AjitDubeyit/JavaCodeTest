@@ -31,7 +31,7 @@ public class TailInsertDelete {
 		}
 	}
 
-	private void deleteFromTail(Node head) {
+	private Node deleteFromTail(Node head) {
 		Node tempNode = head;
 		if(tempNode!=null) {
 			
@@ -40,6 +40,7 @@ public class TailInsertDelete {
 			}
 			tempNode.next = null;
 		}
+		return head;
 	}
 	//---------------------------------------------
 	
@@ -50,8 +51,9 @@ public class TailInsertDelete {
 		head = tailInsertDelete.insertNode(head, 20);
 		head = tailInsertDelete.insertNode(head, 30);
 		
+		//head = tailInsertDelete.nodeInsertAtTail(head,60);
 		
-		tailInsertDelete.deleteFromTail(head);
+		//tailInsertDelete.deleteFromTail(head);
 		
 		while(head != null) {
 			System.out.println(head.data);

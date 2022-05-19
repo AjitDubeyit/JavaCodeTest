@@ -17,15 +17,13 @@ public class LoggingAspect {
 	
 	private static final Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
 	
-	//@Pointcut("execution(* helloDemo(..))")
-	@Pointcut("execution(public String com.spring.aop.controller.MyController.helloDemo())")
-	public void controller() {
-		System.out.println("controller pointcut");
-	}
+	@Pointcut("execution(* helloDemo(..))")
+	//@Pointcut("execution(public String com.spring.aop.controller.MyController.helloDemo())")
+	public void controller() {}
 	
 	@Before("controller()")
 	public void beforeController(JoinPoint joinPoint) {
-		System.out.println("before controller");
+		System.out.println("before controller"+joinPoint.toString());
 	}
 	
 	
