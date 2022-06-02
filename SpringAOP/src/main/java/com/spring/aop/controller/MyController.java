@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
+	
 	@RequestMapping("/")
 	public String helloDemo() {
 		//int i = 8/0;

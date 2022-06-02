@@ -1,0 +1,26 @@
+spring:    application:      name: test-config    cloud:      config:        uri: http://localhost:8080        profile: uat        fail-fast: false#server:#  port: 8081
+#eureka:
+#  client:
+#    enabled: false
+#    
+#spring:#    application:
+#      name: test-config
+#    cloud:
+#      config:
+#        uri: http://localhost:8080
+#        profile: uat
+#        fail-fast: false
+#        
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,refresh
+#  security:
+#    enabled: false
+#  health:
+#    ldap:
+#      enabled: false
+#endpoints:
+#  health:
+#    sensitive: false
